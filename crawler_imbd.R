@@ -88,7 +88,8 @@ title_ratings_imdbR <- function (filmes){
   tabela <- tabela %>% #coloca dentro dessa tabela vazia previamente criada os links dentro de filmes
     rbind(crawler_imdb(filmes[i]))
   }
-  tabela
+  tabela %>% 
+    arrange(-Nota) #ordem decrescente; crescente = sem o menos
 }
 #função criada
 
